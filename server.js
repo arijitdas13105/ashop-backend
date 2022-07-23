@@ -11,7 +11,8 @@ const app = express();
 
 require("dotenv").config();
 //
-app.use(cors({origin:'https://ashop-server.herokuapp.com'}))
+// app.use(cors({origin:'https://ashop-frontend-new.vercel.app'}))
+app.use(cors({origin:'*'}))
 app.use('/api',productRoute)
 // app.use('https://ashop-server.herokuapp.com/api',productRoute)
 
