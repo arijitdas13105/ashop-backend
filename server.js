@@ -9,7 +9,9 @@ const app = express();
 require("dotenv").config();
 //
 
-app.use('/api',productRoute)
+app.use('https://ashop-server.herokuapp.com/api',productRoute)
+// app.use('/api',productRoute)
+
 // app.use("https://a-ecom.herokuapp.com/api", productRoute);
 // -------------- deployment ----------
 // if (process.env.NODE_ENV === "production") {
