@@ -5,6 +5,7 @@ const asyncHandler = require("express-async-handler");
 
 router.get('/products',asyncHandler(async (req, res) => {
     const products = await Product.find({});
+    console.log(products)
     res.json(products);
   })
 );
