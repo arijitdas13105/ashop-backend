@@ -3,12 +3,15 @@ const mongoose = require("mongoose");
 const connectDb = require("./config/config");
 const path = require("path");
 const productRoute = require("./routes/ProductRoute");
+const cors=require('cors')
+
 connectDb();
 
 const app = express();
+
 require("dotenv").config();
 //
-
+app.use(cors({origin:'https://ashop-server.herokuapp.com'}))
 app.use('/api',productRoute)
 // app.use('https://ashop-server.herokuapp.com/api',productRoute)
 
